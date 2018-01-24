@@ -1,0 +1,20 @@
+type Person {
+  id: ID!
+
+  # Name of the person
+  name: String
+
+  # Age of the peson
+  age: Int
+}
+
+# The schema's root query type
+type Query {
+
+  # Find a person by ID
+  findPerson(id: ID!): Person
+}
+
+schema {
+  query: Query
+}
